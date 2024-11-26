@@ -291,6 +291,9 @@ router.post('/checkExpiry', async (req, res) => {
 
 
 // Change this route to match the link in the email
+
+
+
 router.get('/downloadHallTicket/:hallTicketNumber', async (req, res) => {
     const hallTicketNumber = req.params.hallTicketNumber;
 
@@ -302,7 +305,7 @@ router.get('/downloadHallTicket/:hallTicketNumber', async (req, res) => {
             return res.status(404).json({ message: 'Hall Ticket not found' });
         }
 
-        const htmlContent = `
+        const htmlContent = `  
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -424,21 +427,24 @@ router.get('/downloadHallTicket/:hallTicketNumber', async (req, res) => {
         </html>
         `;
 
-        // Generate the PDF
-        pdf.create(htmlContent).toBuffer((err, buffer) => {
+        // PDF creation with error handling
+        pdf.create(htmlContent, { format: 'A4' }).toBuffer((err, buffer) => {
             if (err) {
+                console.error('Error generating PDF:', err);  // Log error
                 return res.status(500).json({ message: 'Error generating PDF' });
             }
 
-            // Set headers to prompt the user to download the PDF
+            // Set headers to prompt user to download PDF
             res.setHeader('Content-Type', 'application/pdf');
             res.setHeader('Content-Disposition', `attachment; filename=${hallTicket.hallTicketNumber}_hall_ticket.pdf`);
-            res.send(buffer);  // Send the PDF file to the client
+            res.send(buffer);  // Send the PDF to the client
         });
 
     } catch (error) {
+        console.error('Error generating hall ticket:', error);  // Log the error
         res.status(500).json({ message: 'Error generating hall ticket', error: error.message });
     }
 });
+
 
 module.exports = router;

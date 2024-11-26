@@ -16,6 +16,7 @@ const hallTicketSchema = new mongoose.Schema({
     hallTicketNumber: { type: String, unique: true },
     subscriptionStartDate: { type: Date, default: Date.now }, // Subscription start date
     expiryDate: Date
+    //added
 });
 
 const HallTicket = mongoose.model('HallTicket', hallTicketSchema);

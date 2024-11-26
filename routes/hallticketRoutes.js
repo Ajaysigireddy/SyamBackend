@@ -17,13 +17,18 @@ const getNextSequence = async (counterName) => {
 
 // Create the nodemailer transporter for sending emails
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // Use your email service (e.g., Gmail, SendGrid, etc.)
+    service: 'gmail', // Use Gmail service
     auth: {
-        user: process.env.EMAIL_ID, // Replace with your email
-        pass: process.env.PASSWORD // Replace with your email password or app-specific password
-    }
+        user: process.env.EMAIL_ID, // Your email from environment variable
+        pass: process.env.PASSWORD // Your email password or app-specific password
+    },
+    tls: {
+        rejectUnauthorized: false // Allow self-signed certificates
+    },
+    // Specify port 587 for STARTTLS (Gmail's recommended port for secure email sending)
+    secure: false,  // Set to false for STARTTLS (true for SSL)
+    port: 587, // Port 587 for STARTTLS
 });
-
 const sendEmail = (email, hallTicket) => {
     const mailOptions = {
         from: 'demosyam1234@gmail.com',

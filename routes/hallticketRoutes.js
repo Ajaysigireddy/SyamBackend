@@ -1,6 +1,6 @@
 const express = require('express');
 const Counter = require('../models/counter');
-const HallTicket=require('../models/hallTicket')
+const HallTicket = require('../models/hallTicket');
 const nodemailer = require('nodemailer');
 const router = express.Router();
 require('dotenv').config();

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.667.0",
+    "@aws-sdk/lib-storage": "^3.691.0",
+    "argon2": "^0.41.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "html-pdf": "^3.0.1",
+    "json2xls": "^0.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start":"nodemon server.js"
+  }
+}

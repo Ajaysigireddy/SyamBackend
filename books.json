@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "The Great Gatsby",
+      "price": 12.99,
+      "image": "https://example.com/gatsby.jpg"
+    },
+    {
+      "id": 2,
+      "name": "To Kill a Mockingbird",
+      "price": 14.99,
+      "image": "https://example.com/mockingbird.jpg"
+    },
+    {
+      "id": 3,
+      "name": "1984",
+      "price": 9.99,
+      "image": "https://example.com/1984.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The Great Gatsby",
+      "price": 12.99,
+      "image": "https://example.com/gatsby.jpg"
+    },
+    {
+      "id": 5,
+      "name": "To Kill a Mockingbird",
+      "price": 14.99,
+      "image": "https://example.com/mockingbird.jpg"
+    },
+    {
+      "id": 6,
+      "name": "1984",
+      "price": 9.99,
+      "image": "https://example.com/1984.jpg"
+    },
+    {
+      "id": 7,
+      "name": "The Great Gatsby",
+      "price": 12.99,
+      "image": "https://example.com/gatsby.jpg"
+    },
+    {
+      "id": 8,
+      "name": "To Kill a Mockingbird",
+      "price": 14.99,
+      "image": "https://example.com/mockingbird.jpg"
+    },
+    {
+      "id": 9,
+      "name": "1984",
+      "price": 9.99,
+      "image": "https://example.com/1984.jpg"
+    }
+  ]
+  

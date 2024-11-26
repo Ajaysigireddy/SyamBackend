@@ -28,6 +28,7 @@ const sendEmail = (email, hallTicket) => {
     const mailOptions = {
         from: 'demosyam1234@gmail.com',
         to: email,
+        secure: true, 
         subject: 'Your Hall Ticket Information',
         html: `
  <html lang="en">

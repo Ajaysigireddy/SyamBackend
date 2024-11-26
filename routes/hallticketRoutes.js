@@ -160,7 +160,7 @@ const sendEmail = (email, hallTicket) => {
                                 <td>${hallTicket.expiryDate.toISOString().split('T')[0]}</td>
                             </tr>
                         </table>
- <p>You can <a href="https://backends-amber.vercel.app/hallticket/downloadHallTicket/${hallTicket.hallTicketNumber}" class="btn">Download your Hall Ticket</a>
+ <p>You can <a href="https://syam-backend-6x988ux86-ajaysigireddys-projects.vercel.app/hallticket/downloadHallTicket/${hallTicket.hallTicketNumber}" class="btn">Download your Hall Ticket</a>
 for printout.</p>
                         <p>For any further assistance, feel free to contact us.</p>
                     </div>
